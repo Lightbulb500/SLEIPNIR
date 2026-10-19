@@ -112,9 +112,6 @@ Run everything from the repository root:
     Modules/{Core,Spectra,Plotting}/...
 ```
 
-The notebooks and `Plotting_Functions` import `Modules.Core...`, but `Spectra_Functions` imports `Core.Core_Functions`, which fails
-from a clean environment (`ModuleNotFoundError: No module named 'Core'`). Either:
-
 ## 7. Register the kernel and start Jupyter
 
 ```bash
