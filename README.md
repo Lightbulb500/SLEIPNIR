@@ -13,4 +13,11 @@ SLEIPNIR is best installed in its own environment and utilises several external 
 These instructions assume the use of the anaconda environment manager
 SLEIPNIR has been tested using Python 3.12 - other versions may work, but could introduce bugs / variation in results
 
-Detailed installation instructions are provided in INSTAL.md
+Detailed installation instructions are provided in the INSTALL.md file located in the 'Documentation' folder
+
+# References for external software
+
+The external software packages and services used within SLEIPNIR are outlines in the 'REFERENCES.md' file with the the 'Documentation' folder
+
+Anthropic’s Claude Sonnet 5 has been used in the preparation of this public release.
+Focused on optimisation, minor bug fixing and refinements in documentation.

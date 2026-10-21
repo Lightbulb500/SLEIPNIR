@@ -1,0 +1,202 @@
+% SLEIPNIR - references for the software, models and data used. See REFERENCES.md for what each one is for.
+
+%% ---------------------------------------------------------------- Software
+
+@article{Harris2020,
+  author  = {Harris, Charles R. and Millman, K. Jarrod and others},
+  title   = {Array programming with {NumPy}},
+  journal = {Nature},
+  year    = {2020},
+  volume  = {585},
+  pages   = {357--362},
+  doi     = {10.1038/s41586-020-2649-2}
+}
+
+@article{Virtanen2020,
+  author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and others},
+  title   = {{SciPy} 1.0: fundamental algorithms for scientific computing in {Python}},
+  journal = {Nature Methods},
+  year    = {2020},
+  volume  = {17},
+  pages   = {261--272},
+  doi     = {10.1038/s41592-019-0686-2}
+}
+
+@inproceedings{McKinney2010,
+  author    = {McKinney, Wes},
+  title     = {Data Structures for Statistical Computing in {Python}},
+  booktitle = {Proceedings of the 9th Python in Science Conference},
+  year      = {2010},
+  pages     = {56--61},
+  doi       = {10.25080/Majora-92bf1922-00a}
+}
+
+@misc{pandas2020,
+  author    = {{The pandas development team}},
+  title     = {pandas-dev/pandas: Pandas},
+  year      = {2020},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.3509134},
+  note      = {Cite the DOI of the version used}
+}
+
+@article{Hunter2007,
+  author  = {Hunter, John D.},
+  title   = {Matplotlib: A 2{D} Graphics Environment},
+  journal = {Computing in Science \& Engineering},
+  year    = {2007},
+  volume  = {9},
+  number  = {3},
+  pages   = {90--95},
+  doi     = {10.1109/MCSE.2007.55}
+}
+
+@article{Astropy2013,
+  author  = {{Astropy Collaboration}},
+  title   = {Astropy: A community {Python} package for astronomy},
+  journal = {Astronomy \& Astrophysics},
+  year    = {2013},
+  volume  = {558},
+  pages   = {A33},
+  doi     = {10.1051/0004-6361/201322068}
+}
+
+@article{Astropy2018,
+  author  = {{Astropy Collaboration}},
+  title   = {The Astropy Project: Building an Open-science Project and Status of the v2.0 Core Package},
+  journal = {The Astronomical Journal},
+  year    = {2018},
+  volume  = {156},
+  pages   = {123},
+  doi     = {10.3847/1538-3881/aabc4f}
+}
+
+@article{Astropy2022,
+  author  = {{Astropy Collaboration}},
+  title   = {The Astropy Project: Sustaining and Growing a Community-oriented Open-source Project and the Latest Major Release (v5.0) of the Core Package},
+  journal = {The Astrophysical Journal},
+  year    = {2022},
+  volume  = {935},
+  pages   = {167},
+  doi     = {10.3847/1538-4357/ac7c74}
+}
+
+@misc{Carnall2017,
+  author        = {Carnall, Adam C.},
+  title         = {{SpectRes}: A Fast Spectral Resampling Tool in {Python}},
+  year          = {2017},
+  eprint        = {1705.05165},
+  archivePrefix = {arXiv}
+}
+
+@article{Gordon2024,
+  author  = {Gordon, Karl D.},
+  title   = {dust\_extinction: Interstellar Dust Extinction Models},
+  journal = {Journal of Open Source Software},
+  year    = {2024},
+  volume  = {9},
+  number  = {100},
+  pages   = {7023},
+  doi     = {10.21105/joss.07023}
+}
+
+@article{Green2018,
+  author  = {Green, Gregory M.},
+  title   = {dustmaps: A Python interface for maps of interstellar dust},
+  journal = {Journal of Open Source Software},
+  year    = {2018},
+  volume  = {3},
+  number  = {26},
+  pages   = {695},
+  doi     = {10.21105/joss.00695}
+}
+
+@article{Borghi2022,
+  author  = {Borghi, Nicola and Moresco, Michele and Cimatti, Andrea and Huchet, Alexandre and Quai, Salvatore and Pozzetti, Lucia},
+  title   = {Toward a Better Understanding of Cosmic Chronometers: Stellar Population Properties of Passive Galaxies at Intermediate Redshift},
+  journal = {The Astrophysical Journal},
+  year    = {2022},
+  volume  = {927},
+  pages   = {164},
+  doi     = {10.3847/1538-4357/ac3240},
+  eprint  = {2106.14894},
+  archivePrefix = {arXiv}
+}
+
+%% ---------------------------------------------------------------- Extinction correction
+
+@article{Schlegel1998,
+  author  = {Schlegel, David J. and Finkbeiner, Douglas P. and Davis, Marc},
+  title   = {Maps of Dust Infrared Emission for Use in Estimation of Reddening and Cosmic Microwave Background Radiation Foregrounds},
+  journal = {The Astrophysical Journal},
+  year    = {1998},
+  volume  = {500},
+  pages   = {525--553},
+  doi     = {10.1086/305772}
+}
+
+@article{Schlafly2011,
+  author  = {Schlafly, Edward F. and Finkbeiner, Douglas P.},
+  title   = {Measuring Reddening with {Sloan Digital Sky Survey} Stellar Spectra and Recalibrating {SFD}},
+  journal = {The Astrophysical Journal},
+  year    = {2011},
+  volume  = {737},
+  pages   = {103},
+  doi     = {10.1088/0004-637X/737/2/103},
+  eprint  = {1012.4804},
+  archivePrefix = {arXiv}
+}
+
+@article{Fitzpatrick1999,
+  author  = {Fitzpatrick, Edward L.},
+  title   = {Correcting for the Effects of Interstellar Extinction},
+  journal = {Publications of the Astronomical Society of the Pacific},
+  year    = {1999},
+  volume  = {111},
+  pages   = {63--75},
+  doi     = {10.1086/316293}
+}
+
+%% ---------------------------------------------------------------- Spectral index definitions and errors (via pylick)
+
+@article{Bruzual1983,
+  author  = {Bruzual A., Gustavo},
+  title   = {Spectral evolution of galaxies. {I}. Early-type systems},
+  journal = {The Astrophysical Journal},
+  year    = {1983},
+  volume  = {273},
+  pages   = {105--127},
+  doi     = {10.1086/161352}
+}
+
+@article{WortheyOttaviani1997,
+  author  = {Worthey, Guy and Ottaviani, Devin L.},
+  title   = {{H}$\gamma$ and {H}$\delta$ Absorption Features in Stars and Stellar Populations},
+  journal = {The Astrophysical Journal Supplement Series},
+  year    = {1997},
+  volume  = {111},
+  pages   = {377--388},
+  doi     = {10.1086/313021}
+}
+
+@article{Cardiel1998,
+  author  = {Cardiel, N. and Gorgas, J. and Cenarro, J. and Gonz{\'a}lez, J. J.},
+  title   = {Reliable random error estimation in the measurement of line-strength indices},
+  journal = {Astronomy \& Astrophysics Supplement Series},
+  year    = {1998},
+  volume  = {127},
+  pages   = {597--605},
+  doi     = {10.1051/aas:1998123}
+}
+
+%% ---------------------------------------------------------------- Imaging used for the cutouts in the classification plots
+
+@article{Dey2019,
+  author  = {Dey, Arjun and Schlegel, David J. and Lang, Dustin and others},
+  title   = {Overview of the {DESI} Legacy Imaging Surveys},
+  journal = {The Astronomical Journal},
+  year    = {2019},
+  volume  = {157},
+  pages   = {168},
+  doi     = {10.3847/1538-3881/ab089d}
+}
