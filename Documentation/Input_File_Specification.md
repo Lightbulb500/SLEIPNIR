@@ -82,10 +82,10 @@ uses the Fitzpatrick (1999) law with Rv = 3.1. If it is blank, SLEIPNIR warns an
 | Value | Meaning | What SLEIPNIR does |
 |---|---|---|
 | `0` | Fluxes are **not** corrected for Galactic extinction | Divides flux and error by the F99 transmission for `Extinction` |
-| `1` | Fluxes are **already** corrected | No correction. `Extinction` is not used |
+| `1` | Fluxes are **already** corrected | No correction. `Extinction` is not used in the analysis. However the `Extinction` value is propagated to the output file |
 
-As with the redshift flag, it must be exactly `0` or `1`. For a corrected spectrum enter `0` in `Extinction` rather than leaving it blank:
-the notebook decides whether to query the dust map from the `Extinction` value alone, so a blank would trigger a map lookup whose result is never used.
+As with the redshift flag, it must be exactly `0` or `1`. For a corrected spectrum it is preferred to still include the value used in the correction as
+this value is propagated as is to the output file, regardless if it is used directly by SLEIPNIR.
 
 ### `Flux_Scaled_Flag`
 The units of the flux and flux error columns in this spectrum's file:
