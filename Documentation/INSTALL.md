@@ -3,30 +3,15 @@
 A fresh Anaconda / Miniconda environment on Python 3.12, with everything possible installed through conda (conda-forge) and
 `pylick` installed through pip without its dependency pins.
 
-Commands are for a bash / zsh shell (macOS, Linux, WSL). On Windows use the Anaconda Prompt and run the commands in step 3 one at a time
-instead of the `for` loop.
+The installation has been tested to work as expected on machines running Apple Silicon and may need to be adapted for other hardware configurations
 
 ## 1. Create the environment
 
 ```bash
-# macOS only: check the architecture first - 'uname -m' and conda's 'platform' should agree
-uname -m                                # arm64 = Apple Silicon, x86_64 = Intel
-conda info | grep platform              # osx-arm64 = native Apple Silicon, osx-64 = Intel (or Rosetta)
-echo "CONDA_SUBDIR=[$CONDA_SUBDIR]"     # normally empty
-
-# Apple Silicon (osx-arm64). On an Intel Mac use osx-64 in both places. On Linux / Windows leave out the CONDA_SUBDIR prefix and the 'subdir' line.
-CONDA_SUBDIR=osx-arm64 conda create -n sleipnir --override-channels -c conda-forge python=3.12 -y
+conda create -n sleipnir --override-channels -c conda-forge python=3.12 -y
 conda activate sleipnir
-conda config --env --set subdir osx-arm64
 conda config --env --set channel_priority strict
-
-# Check inside the activated environment - all three must agree and the python line must run without an error
-conda info | grep platform              # must still say osx-arm64
-python -c "import ssl, platform; print(platform.machine())"     # must print arm64
-conda config --show-sources             # look for any 'subdir' or 'channels' left over from an older set up
 ```
-
-The `subdir` line pins the environment to one architecture so later installs can never pull in packages built for the other one.
 
 Every `conda` command below carries `--override-channels -c conda-forge` explicitly. Your global conda configuration (`~/.condarc`) can
 list other channels (`defaults`, `astroconda`, `conda-pypi`...), and `conda config --env` only adds to those rather than replacing them.
@@ -95,7 +80,7 @@ Download the files:
 	SFD_dust_4096_ngp.fits
 	SFD_dust_4096_sgp.fits
 	
-Ensure these are placed in the defined dustmaps datafolder:
+Ensure these are placed in the defined dustmaps datafolder - ensuring the inclusion of the 'sfd' subfolder:
 
 	'/path/to/dustmaps_data/sfd/*'
 
