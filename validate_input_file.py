@@ -20,7 +20,8 @@ REQUIRED_COLUMNS = [
 	'Redshift_Corrected_Flag', 'Extinction', 'Extinction_Corrected_Flag', 'Flux_Scaled_Flag'
 ]
 NUMERIC_COLUMNS = [
-	'MJD', 'RA', 'DEC', 'Redshift', 'Redshift_Err', 'Redshift_Corrected_Flag', 'Extinction', 'Extinction_Corrected_Flag', 'Flux_Scaled_Flag'
+	'MJD', 'RA', 'DEC', 'Redshift', 'Redshift_Err', 'Redshift_Corrected_Flag', 'Extinction',
+	'Extinction_Corrected_Flag', 'Flux_Scaled_Flag'
 ]
 
 
@@ -149,7 +150,6 @@ def validate_input_file(path):
 
 		if numbers['Flux_Scaled_Flag'][row] not in (0, 1):
 			row_report('ERROR', f"Flux_Scaled_Flag must be exactly 0 or 1 (found {table.at[row, 'Flux_Scaled_Flag']}) - SLEIPNIR_Analysis stops with an error otherwise")
-
 		redshift = numbers['Redshift'][row]
 		if pd.isna(table.at[row, 'Redshift']):
 			row_report('WARNING', 'Redshift is blank - z = 0 will be assumed and the spectrum treated as already rest-frame')
@@ -159,9 +159,9 @@ def validate_input_file(path):
 		extinction = numbers['Extinction'][row]
 		if pd.isna(table.at[row, 'Extinction']):
 			if ext_flag == 1:
-				row_report('WARNING', 'Extinction is blank - it is not needed for an already corrected spectrum, but the dust map will still be queried; use 0 to avoid that')
+				row_report('WARNING', 'Extinction is blank - it is not directly used for an already corrected spectrum, but will be looked up from the SFD dust map as this value propagates to the output file')
 			else:
-				row_report('WARNING', 'Extinction is blank - it will be looked up from the SFD dust map (the map files must be installed)')
+				row_report('WARNING', 'Extinction is blank - it will be looked up from the SFD dust map')
 		elif np.isfinite(extinction) and (extinction < 0 or extinction > 1):
 			row_report('WARNING', f'Extinction (E(B-V)) = {extinction} is outside 0 - 1 mag, check the units')
 

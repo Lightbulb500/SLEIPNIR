@@ -1,0 +1,2 @@
+Target	Spectrum_Path	SpecType	MJD	RA	DEC	Redshift	Redshift_Err	Redshift_Corrected_Flag	Extinction	Extinction_Corrected_Flag	Flux_Scaled_Flag	Wavelength_System
+1	Example_Inputs/AT2018dyk/AT2018dyk_2018-08-08_08-18-46_Keck1_LRIS_TNS.ascii	ascii	58000	100	-20	0.03671987	0.001	0		0	0	Air

@@ -21,7 +21,7 @@ doesn't load - which in turn stops `pip` from reaching PyPI. Keep the old `astro
 ## 2. Core stack (all conda)
 
 ```bash
-conda install -y --override-channels -c conda-forge numpy scipy pandas astropy matplotlib pillow tqdm colorama requests jupyterlab ipywidgets ipykernel
+conda install -y --override-channels -c conda-forge numpy scipy pandas astropy matplotlib pillow tqdm colorama requests jupyterlab ipywidgets ipykernel specutils
 ```
 
 `ipywidgets` is only needed so the `tqdm.notebook` progress bars render in the notebooks; `requests` is installed here because
