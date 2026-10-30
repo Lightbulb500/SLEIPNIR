@@ -1,0 +1,3 @@
+The configuration files included here match the configuration used in the DESI EDR search as presented in Clark et al., 2026 - https://10.1093/mnras/stag887
+.config files are accessible as standard .ascii files in text editors
+Note: DESI specific cuts / processing steps are not reflected in these files, nor in the wider release
